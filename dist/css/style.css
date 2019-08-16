@@ -1,0 +1,450 @@
+@charset "UTF-8";
+html {
+    background-color: #F2F2F2;
+    font-family: Lato, Helvetica, Arial, Sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+
+/*****
+ BODY: TITLE BAR 
+*****/
+
+.body_top {
+    width: 100%;
+}
+
+.title_container {
+    margin: 0px;
+    display: inline-block;
+    width: 96%;
+    padding: 0 2%;
+}
+
+h1 {
+    color: #000;
+    margin: 1px 0px;
+    padding: 0px;
+    font-size: 50px;
+}
+
+.title {
+    float: left;
+}
+
+.title_change {
+    font-weight: lighter;
+    float: right;
+}
+
+.title_increase {
+    background: linear-gradient(to right, #F2F2F2, #61B329);
+    border-bottom: 2px solid #61B329;
+}
+
+.title_decrease {
+    background: linear-gradient(to right, #F2F2F2, #FF3300);
+    border-bottom: 2px solid #FF3300;
+}
+
+
+/*****
+ BODY: CONTENT CONTAINERS
+*****/
+
+.body_wrapper {
+    display: grid;
+    grid-template-columns: 25% auto 25%;
+    margin: 0 2%;
+    background: #F2F2F2;
+}
+
+
+/*
+.left_container,
+.right_container,
+.middle_container {
+    background: #FFF;
+}
+*/
+
+.left_container,
+.right_container {
+    position: relative;
+    /* border-left: 3px solid #EEB111;
+    border-right: 3px solid #EEB111; */
+}
+
+.left_container,
+.right_container {
+    display: grid;
+    grid-template-rows: 110px auto;
+}
+
+.middle_container {
+    display: grid;
+    grid-template-rows: 70px auto 10px;
+    margin: 0 4%;
+    padding: 0 5px;
+    background: #FFF;
+}
+
+
+/*****
+ HOLDINGS/BALANCE CONTAINERS (SYMMETRY)
+*****/
+
+.outer_title {
+    width: 100%;
+    text-align: center;
+}
+
+h3 {
+    margin: 15px 5px 5px 5px;
+    font-size: 18px;
+    /* color: #FFF;
+    border-radius: 5px; */
+    padding: 0.5% 1%;
+}
+
+.stock_label {
+    /* background: #174c4c; */
+    margin: 0;
+    padding-left: 5px;
+    border-top: 2px solid #000;
+    border-bottom: 1px solid #000;
+}
+
+.crypto_label {
+    /* background: #3dcccc; */
+    margin: 0;
+    padding-left: 5px;
+    border-top: 2px solid #000;
+    border-bottom: 1px solid #000;
+}
+
+.positions,
+.wallet {
+    margin: 5% 0;
+    padding: 1%;
+    /* border-radius: 10px; */
+}
+
+
+/*
+.positions {
+    background: #174c4c;
+}
+
+.wallet {
+    background: #3DCCCC;
+}
+
+.stock_position_container {
+    background: #FFF;
+    border-radius: 5px;
+    color: #174c4c;
+}
+
+.crypto_wallet_container {
+    background: #FFF;
+    border-radius: 5px;
+    color: #3DCCCC;
+}
+*/
+
+table {
+    width: 100%;
+    font-size: 13px;
+    margin: 0px 0px;
+    padding: 0px;
+}
+
+
+/*****
+ HOLDINGS CONTAINER
+*****/
+
+.left_title {
+    margin-bottom: 5px;
+    padding: 0px;
+}
+
+
+/***** 
+ HOLDINGS CONTAINER: Add Holding
+*****/
+
+.add_holding {
+    text-align: center;
+}
+
+#add_holding_button {
+    font-size: 15px;
+    border-radius: 5px;
+    background: #DEED05;
+}
+
+menu {
+    text-align: center;
+    padding: 0px;
+    margin: 0px;
+}
+
+form {
+    padding: 1px;
+}
+
+.input_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+
+/*****
+ HOLDINGS CONTAINER: Positions
+*****/
+
+.left_container th td {
+    width: 25%;
+}
+
+.holding_quantity {
+    padding-top: 10px;
+}
+
+.per_share_top {
+    display: inline-block;
+    padding: 10px 0px 0px 40px;
+}
+
+.per_share_bottom {
+    display: inline-block;
+    padding: 0px 0px 0px 40px;
+}
+
+.holding_per_share {
+    float: left;
+}
+
+.per_share_text {
+    font-size: 9px;
+    float: left;
+}
+
+.center {
+    text-align: center;
+}
+
+.remove_holding {
+    width: 90%;
+    margin: 0px;
+    padding: 0px;
+    font-size: 8.5px;
+    border-radius: 25px;
+    background: #FF8080;
+    border-color: #FF8080;
+    color: #FFF;
+}
+
+
+/*****
+ TICKER CONTAINER
+*****/
+
+.middle_container {
+    background: #FCFCFC;
+}
+
+.stocks_container {
+    display: grid;
+    grid-row-gap: 15px;
+    margin-bottom: 15px;
+}
+
+.stock_container {
+    padding-left: 1px;
+}
+
+.stock_container_increase {
+    border-left: 6px solid #61B329;
+    border-radius: 10px;
+    background-color: #FFF;
+    color: #000;
+    display: grid;
+}
+
+.stock_container_decrease {
+    border-left: 6px solid #FF3300;
+    border-radius: 10px;
+    background-color: #FFF;
+    color: #000;
+    display: grid;
+}
+
+.stock_container_stock {
+    height: 104px;
+}
+
+.stock_container_crypto {
+    height: 171px;
+}
+
+.stock_top {
+    display: grid;
+    grid-template-columns: 75% 25%;
+}
+
+.stock_symbol,
+.stock_current_value {
+    font-size: 30px;
+}
+
+.stock_current_value {
+    text-align: right;
+}
+
+.change_container {
+    display: grid;
+    grid-template-columns: 10% 1fr 1fr;
+    grid-column-gap: 3px;
+    justify-items: center;
+}
+
+.stock_bottom {
+    padding-top: 5px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1.5fr;
+    text-align: center;
+}
+
+.crypto_bottom_1 {
+    padding-top: 5px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1.5fr;
+    text-align: center;
+}
+
+.crypto_bottom_2 {
+    padding-top: 5px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1.5fr;
+    text-align: center;
+}
+
+.top_border {
+    border-top: 1px solid lightgrey;
+}
+
+.label {
+    color: #939597;
+    font-size: 8.5px;
+}
+
+.refresh_button_container {
+    display: grid;
+    grid-template-columns: 10% 90%;
+    text-align: end;
+    position: relative
+}
+
+.button_container {
+    position: absolute;
+    bottom: 5%;
+}
+
+.refresh_button {
+    font-size: 12px;
+    border-radius: 5px;
+    background: #A6A6A6;
+}
+
+.last_updated_container {
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    bottom: 5%;
+    left: 10%;
+}
+
+.last_updated_text {
+    margin: 0;
+    padding: 0;
+    font-size: 8px;
+}
+
+
+/*****
+ BALANCE CONTAINER
+*****/
+
+.balance_outer_title {
+    display: grid;
+    grid-template-columns: 10% 80% 10%;
+}
+
+#balance_title {
+    margin-bottom: 1%;
+}
+
+.account_summary_increase {
+    background: radial-gradient(#61B329, #FFF);
+}
+
+.account_summary_decrease {
+    background: radial-gradient(#FF3300, #FFF);
+}
+
+.account_summary {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+.total_balance_container {
+    margin-top: 5px;
+}
+
+p {
+    display: flex;
+    margin: 0;
+}
+
+#account_balance {
+    font-size: 25px;
+    justify-content: center;
+}
+
+#account_change {
+    font-size: 15px;
+    justify-content: center;
+}
+
+.align_right {
+    text-align: rightl
+}
+
+.right_container table {
+    text-align: center;
+}
+
+#stock_symbol {
+    font-size: 26px;
+}
+
+
+/*****
+ CHANGE COLOR
+*****/
+
+.increase {
+    color: #61B329;
+}
+
+.decrease {
+    color: #FF3300;
+}

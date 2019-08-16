@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+    <title>Portfolio</title>
+</head>
+
+<body>
+    <div class="body_container">
+        <div class="body_top">
+            <!--<div class="body_top_left"></div>-->
+            <div class="title_container">
+                <h1 class="title">PORTFOLIO</h1>
+                <h1 class="title_change"></h1>
+            </div>
+            <!--<div class="body_top_right"></div>-->
+        </div>
+        <div class="body_wrapper">
+            <div class="left_container">
+                <div class="outer_title">
+                    <h2 class="left_title">HOLDINGS</h2>
+                    <div class="add_holding">
+                        <dialog id="holding_dialog">
+                            <form method="dialog">
+                                <fieldset>
+                                    <div class="type">
+                                        <div class="add_type">
+                                            <label for="select_type">Type:</label>
+                                        </div>
+                                        <div class="type_dropdown">
+                                            <select name="select_type" required>
+                                            <option value="stock">Stock</option>
+                                            <option value="cryptocurrency">Cryptocurrency</option>
+                                        </select>
+                                        </div>
+                                    </div>
+                                    <div class="symbol">
+                                        <div class="add_label">
+                                            <label for="symbol_input">Stock Symbol:</label>
+                                        </div>
+                                        <div class="add_input">
+                                            <input type="text" id="holding_symbol" name="symbol_input" required>
+                                        </div>
+                                    </div>
+                                    <div class="add_quantity">
+                                        <div class="add_label">
+                                            <label for="quantity_input">Quantity:</label>
+                                        </div>
+                                        <div class="add_input">
+                                            <input type="text" id="holding_quantity" name="quantity_input" required>
+                                        </div>
+                                    </div>
+                                    <div class="cost_basis">
+                                        <div class="add_label">
+                                            <label for="cost_basis_input">Cost Basis (Total):</label>
+                                        </div>
+                                        <div class="add_input">
+                                            $<input type="text" id="holding_cost" name="cost_basis_input" required>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                                <menu>
+                                    <button value="cancel">Cancel</button>
+                                    <button id="confirm_button" value="default">Confirm</button>
+                                </menu>
+                            </form>
+                        </dialog>
+                        <menu>
+                            <button id="add_holding_button">Add Holding</button>
+                        </menu>
+
+                    </div>
+                </div>
+                <div class="holding_container">
+                    <div class="positions">
+                        <div class="positions_title">
+                            <h3 class="stock_label">Stocks</h3>
+                        </div>
+                        <div class="stock_position_container">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th id="symbol">Symbol</th>
+                                        <th id="quantity">Quantity</th>
+                                        <th id="cost_basis">Cost Basis</th>
+                                        <th class="remove_button_column">&nbsp;</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="stock_position_body">
+                                    <!--
+                            <tr>
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <td id="stock_symbol">SYM</td>
+                                            <td>50</td>
+                                            <td>$2.50/Share</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Company</td>
+                                            <td>&nbsp;</td>
+                                            <td>$125.00</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </tr>
+                            <tr>
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <td id="stock_symbol">SYM</td>
+                                            <td>50</td>
+                                            <td>$2.50/Share</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Company</td>
+                                            <td>&nbsp;</td>
+                                            <td>$125.00</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </tr>
+                            -->
+                                </tbody>
+                            </table>
+
+                        </div>
+                    </div>
+                    <div class="wallet">
+                        <div class="wallet_title">
+                            <h3 class="crypto_label">Cryptocurrencies</h3>
+                        </div>
+                        <div class="crypto_wallet_container">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th id="symbol">Symbol</th>
+                                        <th id="quantity">Quantity</th>
+                                        <th id="cost_basis">Cost Basis</th>
+                                        <th class="remove_button_column">&nbsp;</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="crypto_position_body">
+                                    <!--
+                            <tr>
+                                <table>
+
+                                    <tbody>
+                                        <tr>
+                                            <td id="stock_symbol">SYM</td>
+                                            <td>50</td>
+                                            <td>$2.50/Share</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Company</td>
+                                            <td>&nbsp;</td>
+                                            <td>$125.00</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </tr>
+                            <tr>
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <td id="stock_symbol">SYM</td>
+                                            <td>50</td>
+                                            <td>$2.50/Share</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Company</td>
+                                            <td>&nbsp;</td>
+                                            <td>$125.00</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </tr>
+                        -->
+                                </tbody>
+                            </table>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="middle_container">
+                <div class="outer_title" id="ticker_container">
+                    <h2 class="ticker_title">TICKER</h2>
+                </div>
+                <div class="stocks_container">
+                    <!--
+                <div class="stock_container">
+                    <div class="stock_top">
+                        <div class="stock_top_left">
+                            <div class="stock_symbol"> ACRGF</div>
+                            <div class="company"> Acreage Holdings, Inc. </div>
+                        </div>
+                        <div class="stock_top_right">
+                            <div class="stock_current_value"> 21.49</div>
+                            <div class="change_container">
+                                <div class="change_indicator increase"> ▲ </div>
+                                <div class="dollar_change increase"> 0.44</div>
+                                <div class="percent_change increase"> 2.09% </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="stock_bottom">
+                        <div class="stock_open_container">
+                            <div class="open_value"> 21.48</div>
+                            <div class="open_label label"> OPEN </div>
+                        </div>
+                        <div class="stock_previous_close_container">
+                            <div class="previous_close_value"> 21.05</div>
+                            <div class="previous_close_label label"> PREVIOUS CLOSE </div>
+                        </div>
+                        <div class="day_low_container">
+                            <div class="day_low_value"> 21.00</div>
+                            <div class="day_low_label label"> DAY LOW </div>
+                        </div>
+                        <div class="day_high_container">
+                            <div class="day_high_value"> 21.75</div>
+                            <div class="day_high_label label"> DAY HIGH </div>
+                        </div>
+                        <div class="volume_container">
+                            <div class="volume_value"> 80,288</div>
+                            <div class="volume_label label"> VOLUME </div>
+                        </div>
+                        <div class="market_cap_container">
+                            <div class="market_cap_value"> --</div>
+                            <div class="day_high_label label"> MARKET CAP </div>
+                        </div>
+                        <div></div>
+                    </div>
+                </div>
+                <div class="stock_container">
+                    <div class="stock_top">
+                        <div class="stock_top_left">
+                            <div class="stock_symbol"> APHA </div>
+                            <div class="company"> Aphria, Inc. </div>
+                        </div>
+                        <div class="stock_top_right">
+                            <div class="stock_current_value"> 9.68 </div>
+                            <div class="change_container">
+                                <div class="change_indicator increase"> ▲ </div>
+                                <div class="dollar_change increase"> 0.08 </div>
+                                <div class="percent_change increase"> 0.83% </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="stock_bottom">
+                        <div class="stock_open_container">
+                            <div class="open_value"> 9.50 </div>
+                            <div class="open_label label"> OPEN </div>
+                        </div>
+                        <div class="stock_previous_close_container">
+                            <div class="previous_close_value"> 9.60 </div>
+                            <div class="previous_close_label label"> PREVIOUS CLOSE </div>
+                        </div>
+                        <div class="day_low_container">
+                            <div class="day_low_value"> 9.46 </div>
+                            <div class="day_low_label label"> DAY LOW </div>
+                        </div>
+                        <div class="day_high_container">
+                            <div class="day_high_value"> 9.77 </div>
+                            <div class="day_high_label label"> DAY HIGH </div>
+                        </div>
+                        <div class="volume_container">
+                            <div class="volume_value"> 4,515,634 </div>
+                            <div class="volume_label label"> VOLUME </div>
+                        </div>
+                        <div class="market_cap_container">
+                            <div class="market_cap_value"> 2.40B </div>
+                            <div class="day_high_label label"> MARKET CAP </div>
+                        </div>
+                        <div></div>
+                    </div>
+                </div>
+                <div class="stock_container">
+                    <div class="stock_top">
+                        <div class="stock_top_left">
+                            <div class="stock_symbol"> ACB </div>
+                            <div class="company"> Aurora Cannabis, Inc. </div>
+                        </div>
+                        <div class="stock_top_right">
+                            <div class="stock_current_value"> 6.93 </div>
+                            <div class="change_container">
+                                <div class="change_indicator decrease"> ▼ </div>
+                                <div class="dollar_change decrease"> -0.12 </div>
+                                <div class="percent_change decrease"> -1.70% </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="stock_bottom">
+                        <div class="stock_open_container">
+                            <div class="open_value"> 6.97 </div>
+                            <div class="open_label label"> OPEN </div>
+                        </div>
+                        <div class="stock_previous_close_container">
+                            <div class="previous_close_value"> 7.05 </div>
+                            <div class="previous_close_label label"> PREVIOUS CLOSE </div>
+                        </div>
+                        <div class="day_low_container">
+                            <div class="day_low_value"> 6.85 </div>
+                            <div class="day_low_label label"> DAY LOW </div>
+                        </div>
+                        <div class="day_high_container">
+                            <div class="day_high_value"> 7.08 </div>
+                            <div class="day_high_label label"> DAY HIGH </div>
+                        </div>
+                        <div class="volume_container">
+                            <div class="volume_value"> 16,808,860 </div>
+                            <div class="volume_label label"> VOLUME </div>
+                        </div>
+                        <div class="market_cap_container">
+                            <div class="market_cap_value"> 6.78B </div>
+                            <div class="day_high_label label"> MARKET CAP </div>
+                        </div>
+                        <div></div>
+                    </div>
+                </div>
+                -->
+                </div>
+            </div>
+            <div class="right_container">
+                <div class="outer_title balance_outer_title">
+                    <h2 id="balance_title">BALANCE</h2>
+                    <!--
+                    <div class="account_summary">
+                    <p id="account_balance">$400.00</p>
+                    <p id="account_change">-$200.00</p>
+                    -->
+                </div>
+                <div class="balance_container">
+                    <div class="positions">
+                        <div class="positions_title">
+                            <h3 class="stock_label">Stocks</h3>
+                        </div>
+                        <div class="stock_position_container">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th id="symbol">Symbol</th>
+                                        <th id="change">Total Change</th>
+                                        <th id="current_value">Current Value</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody class="stock_balance">
+                                    <!--
+                            <tr>
+                                <td id="stock_symbol">SYM</td>
+                                <td>-$25.00</td>
+                                <td>$100</td>
+                            </tr>
+                            <tr>
+                                <td id="stock_symbol">SYM</td>
+                                <td>-$25.00</td>
+                                <td>$100</td>
+                            </tr>
+                            -->
+                                </tbody>
+                                <tfoot class="stock_summary">
+                                    <!--
+                            <tr>
+                                <td>Total:</td>
+                                <td>-$50.00</td>
+                                <td>$200.00</td>
+                            </tr>
+                            -->
+                                </tfoot>
+
+                            </table>
+
+                        </div>
+                    </div>
+                    <div class="wallet">
+                        <div class="wallet_title">
+                            <h3 class="crypto_label">Cryptocurrencies</h3>
+                        </div>
+                        <div class="crypto_wallet_container">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th id="symbol">Symbol</th>
+                                        <th id="change">Total Change</th>
+                                        <th id="current_value">Current Value</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody class="crypto_balance">
+                                    <!--
+                            <tr>
+                                <td id="stock_symbol">SYM</td>
+                                <td>-$25.00</td>
+                                <td>$100</td>
+                            </tr>
+                            <tr>
+                                <td id="stock_symbol">SYM</td>
+                                <td>-$25.00</td>
+                                <td>$100</td>
+                            </tr>
+                            -->
+                                </tbody>
+                                <tfoot class="crypto_summary">
+                                    <!--
+                            <tr>
+                                <td>Total:</td>
+                                <td>-$50.00</td>
+                                <td>$200.00</td>
+                            </tr>
+                            -->
+                                </tfoot>
+
+                            </table>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <script src="index.js"></script> -->
+</body>
+
+</html>

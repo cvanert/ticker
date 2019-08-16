@@ -1,0 +1,25 @@
+// Reusable styles
+
+export const elements = {
+    addHoldingButton: document.getElementById('add_holding_button'),
+    holdingDialog: document.getElementById('holding_dialog'),
+    holdingType: document.getElementsByTagName('select')[0],
+    holdingSymbol: document.getElementById('holding_symbol'),
+    holdingQuantity: document.getElementById('holding_quantity'),
+    holdingCost: document.getElementById('holding_cost'),
+    confirmButton: document.getElementById('confirm_button'),
+    holdingsStockBody: document.querySelector('.stock_position_body'),
+    holdingsCryptoBody: document.querySelector('.crypto_position_body'),
+    tickerContainer: document.querySelector('.stocks_container'),
+    accountSummary: document.querySelector('.account_summary'),
+    stockBalance: document.querySelector('.stock_balance'),
+    stockSummary: document.querySelector('.stock_summary'),
+    cryptoBalance: document.querySelector('.crypto_balance'),
+    cryptoSummary: document.querySelector('.crypto_summary'),
+    middleContainer: document.querySelector('.middle_container'),
+    refreshButtonContainer: document.querySelector('.refresh_button_container'),
+    titleContainer: document.querySelector('.title_container'),
+    bodyTop: document.querySelector('.body_top'),
+    bodyContainer: document.querySelector('.body_container'),
+    balanceOuterTitle: document.querySelector('.balance_outer_title'),
+};
